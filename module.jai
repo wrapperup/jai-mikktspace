@@ -219,6 +219,8 @@ generate_tangents :: (pContext: *MikkContext, fAngularThreshold: float32 = 180.0
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#scope_module
+
 INTERNAL_RND_SORT_SEED: u32 : 39871946;
 
 Sub_Group :: struct {
