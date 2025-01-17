@@ -9,7 +9,7 @@ Mikk :: #import "jai-mikktspace";
 
 mesh_data := ...
 
-interface := Mikk.Interface.{
+interface := Mikk.MikkInterface.{
     get_num_faces            = get_num_faces,
     get_num_vertices_of_face = get_num_vertices_of_face,
     get_position             = get_position,
@@ -18,12 +18,12 @@ interface := Mikk.Interface.{
     set_t_space_basic        = set_t_space_basic,
 }
 
-ctx := Mikk.Context.{
+ctx := Mikk.MikkContext.{
     interface = &interface,
     user_data  = &mesh_data,
 };
 
-ok := Mikk.generate_tangents(&ctx);
+ok := Mikk.generate_tangents(*ctx);
 ```
 
 [Full example can be found here](example/example.jai)
