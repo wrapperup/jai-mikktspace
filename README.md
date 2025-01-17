@@ -19,8 +19,8 @@ interface := Mikk.MikkInterface.{
 }
 
 ctx := Mikk.MikkContext.{
-    interface = &interface,
-    user_data  = &mesh_data,
+    mikk_interface = *interface,
+    user_data      = *mesh_data,
 };
 
 ok := Mikk.generate_tangents(*ctx);
